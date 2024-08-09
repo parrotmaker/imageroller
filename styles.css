@@ -24,7 +24,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-input[type="file"], .controls, button {
+input[type="file"], .controls, #continueButton {
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
@@ -33,26 +33,24 @@ input[type="file"], .controls, button {
 }
 
 .carousel-container {
-    width: 80%;
-    max-width: 600px;
-    height: 400px;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #e0f7fa;
     position: relative;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    height: 100%;
+    align-items: center;
 }
 
 .carousel img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 .controls input[type="number"] {
@@ -61,16 +59,19 @@ input[type="file"], .controls, button {
     font-size: 16px;
 }
 
-button {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
+.overlap-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: url('back-icon.png') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
-button:hover {
-    background-color: #333333;
+.overlap-button:hover {
+    opacity: 1;
 }
