@@ -10,7 +10,7 @@ let currentIndex = 0;
 let interval;
 
 function updateCarousel() {
-    const offset = -currentIndex * 100;
+    const offset = -currentIndex * 100; // Assuming each image is 100% of the carousel's width
     carousel.style.transform = `translateX(${offset}%)`;
     currentIndex = (currentIndex + 1) % images.length;
 }
@@ -32,8 +32,10 @@ imageUpload.addEventListener('change', (event) => {
         reader.onload = function(e) {
             const img = document.createElement('img');
             img.src = e.target.result;
-            carousel.appendChild(img);
-            images.push(e.target.result);
+            img.onload = function() { // Ensure image is fully loaded
+                carousel.appendChild(img);
+                images.push(e.target.result);
+            };
         };
         reader.readAsDataURL(files[i]);
     }
