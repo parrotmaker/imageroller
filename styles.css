@@ -11,6 +11,11 @@ body {
 
 .container {
     text-align: center;
+    display: none;
+}
+
+.container.active {
+    display: block;
 }
 
 h1 {
@@ -19,7 +24,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-input[type="file"] {
+input[type="file"], .controls, button {
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
@@ -50,12 +55,22 @@ input[type="file"] {
     object-fit: cover;
 }
 
-.controls {
-    margin-top: 20px;
-}
-
 .controls input[type="number"] {
     width: 100px;
     padding: 5px;
     font-size: 16px;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #333333;
 }
