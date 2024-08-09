@@ -39,9 +39,6 @@ imageUpload.addEventListener('change', (event) => {
         };
         reader.readAsDataURL(files[i]);
     }
-
-    // Set the carousel width based on the number of images
-    carousel.style.width = `${images.length * 100}%`;
 });
 
 continueButton.addEventListener('click', () => {
