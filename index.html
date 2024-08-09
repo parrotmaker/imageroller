@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel</title>
+    <title>Image Carousel Setup</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Image Carousel</h1>
+    <div id="setup" class="container active">
+        <h1>Setup Image Carousel</h1>
         <input type="file" id="imageUpload" accept="image/*" multiple>
-        <div class="carousel-container">
-            <div id="carousel" class="carousel"></div>
-        </div>
         <div class="controls">
             <label for="speed">Adjust Speed (ms): </label>
             <input type="number" id="speed" value="2000">
         </div>
+        <button id="continueButton">Continue</button>
+    </div>
+
+    <div id="carouselPage" class="container">
+        <h1>Image Carousel</h1>
+        <div class="carousel-container">
+            <div id="carousel" class="carousel"></div>
+        </div>
+        <button id="backButton">Back to Setup</button>
     </div>
 
     <script src="script.js"></script>
