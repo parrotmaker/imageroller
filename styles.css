@@ -44,12 +44,13 @@ input[type="file"], .controls, #continueButton {
     transition: transform 0.5s ease-in-out;
     height: 100%;
     align-items: center;
+    width: 100%; /* Ensures the carousel occupies the full width */
 }
 
 .carousel img {
-    width: auto;
+    flex: 0 0 100%; /* Each image takes up 100% of the carousel width */
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Adjust to contain, cover, or fill based on your needs */
     margin: 0 auto;
 }
 
